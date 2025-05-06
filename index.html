@@ -1,15 +1,16 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Beneva Search</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Search | Beneva</title>
 
   <!-- Google Fonts: Open Sans -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
-  <!-- Styles to mimic Beneva look -->
+  <!-- Beneva-like styles -->
   <style>
     body {
       margin: 0;
@@ -18,44 +19,78 @@
       color: #002f5f;
     }
 
-    header {
+    /* Header Navigation */
+    .navbar {
       background-color: #ffffff;
-      border-bottom: 1px solid #ddd;
-      padding: 20px;
-      text-align: center;
+      padding: 16px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      border-bottom: 1px solid #e0e0e0;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-      color: #005C83; /* Beneva blue */
+    .navbar img.logo {
+      height: 36px;
+    }
+
+    .navbar nav a {
+      text-decoration: none;
+      color: #002f5f;
+      margin-left: 24px;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .navbar nav a:hover {
+      text-decoration: underline;
     }
 
     main {
-      max-width: 960px;
+      max-width: 1200px;
       margin: 40px auto;
       padding: 20px;
       background: white;
       border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
     }
 
-    .footer {
+    footer {
       text-align: center;
-      padding: 20px;
+      padding: 40px 20px;
       font-size: 0.875rem;
-      color: #666;
+      color: #888;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .navbar nav {
+        margin-top: 10px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Search Beneva</h1>
+  <!-- Top Navigation Bar -->
+  <header class="navbar">
+    <a href="https://www.beneva.ca/en">
+      <img src="https://www.beneva.ca/-/media/Project/Beneva/logo/beneva-logo-color.svg" alt="Beneva Logo" class="logo"/>
+    </a>
+    <nav>
+      <a href="https://www.beneva.ca/en/insurance">Insurance</a>
+      <a href="https://www.beneva.ca/en/financial-services">Financial Services</a>
+      <a href="https://www.beneva.ca/en/advice">Advice</a>
+      <a href="https://www.beneva.ca/en/about">About</a>
+    </nav>
   </header>
 
+  <!-- Main Content Area with Coveo Search -->
   <main>
-    <!-- Coveo Hosted Search Page -->
     <script
       async
       onload="CoveoSearchPage.initialize('xx99405f4e-3d95-4c2b-b20e-936531f8e9fd')"
@@ -63,9 +98,11 @@
     ></script>
   </main>
 
-  <div class="footer">
-    &copy; 2025 Beneva – All rights reserved.
-  </div>
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Beneva Inc. – All rights reserved.
+  </footer>
 
 </body>
 </html>
+
