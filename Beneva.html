@@ -1,0 +1,102 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Search | Beneva</title>
+
+  <!-- Google Fonts: Open Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- Beneva-like styles -->
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f4f4f4;
+      color: #002f5f;
+    }
+
+    /* Header Navigation */
+    .navbar {
+      background-color: #ffffff;
+      padding: 16px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .navbar img.logo {
+      height: 36px;
+    }
+
+    .navbar nav a {
+      text-decoration: none;
+      color: #002f5f;
+      margin-left: 24px;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .navbar nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.875rem;
+      color: #888;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .navbar nav {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="navbar">
+    <a href="https://www.beneva.ca/en">
+      <img src="https://www.beneva.ca/themes/custom/beneva/dist/svg/assets/logo-beneva.svg" alt="Beneva Logo" class="logo"/>
+    </a>
+    <nav>
+      <a href="https://www.beneva.ca/en/insurance">Insurance</a>
+      <a href="https://www.beneva.ca/en/financial-services">Financial Services</a>
+      <a href="https://www.beneva.ca/en/advice">Advice</a>
+      <a href="https://www.beneva.ca/en/about">About</a>
+    </nav>
+  </header>
+
+  <!-- Main Content Area with Coveo Search -->
+  <main>
+    <script
+      async
+      onload="CoveoSearchPage.initialize('xx99405f4e-3d95-4c2b-b20e-936531f8e9fd')"
+      src="https://search.cloud.coveo.com/rest/organizations/ddaoliver2/searchpage/v1/interfaces/0098f79c-3514-43ac-b5bc-5f2efd4971c3/loader"
+    ></script>
+  </main>
+
+</body>
+</html>
