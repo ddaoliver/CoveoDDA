@@ -1,18 +1,71 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Coveo Search Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beneva Search</title>
+
+  <!-- Google Fonts: Open Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- Styles to mimic Beneva look -->
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f4f4f4;
+      color: #002f5f;
+    }
+
+    header {
+      background-color: #ffffff;
+      border-bottom: 1px solid #ddd;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: #005C83; /* Beneva blue */
+    }
+
+    main {
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.875rem;
+      color: #666;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to My Coveo Search Page</h1>
-  <!-- Coveo Hosted Search Page -->
-  <script
-    async
-    onload="CoveoSearchPage.initialize('xx99405f4e-3d95-4c2b-b20e-936531f8e9fd')"
-    src="https://search.cloud.coveo.com/rest/organizations/ddaoliver2/searchpage/v1/interfaces/0098f79c-3514-43ac-b5bc-5f2efd4971c3/loader"
-  ></script>
-  
+
+  <header>
+    <h1>Search Beneva</h1>
+  </header>
+
+  <main>
+    <!-- Coveo Hosted Search Page -->
+    <script
+      async
+      onload="CoveoSearchPage.initialize('xx99405f4e-3d95-4c2b-b20e-936531f8e9fd')"
+      src="https://search.cloud.coveo.com/rest/organizations/ddaoliver2/searchpage/v1/interfaces/0098f79c-3514-43ac-b5bc-5f2efd4971c3/loader"
+    ></script>
+  </main>
+
+  <div class="footer">
+    &copy; 2025 Beneva – All rights reserved.
+  </div>
+
 </body>
 </html>
